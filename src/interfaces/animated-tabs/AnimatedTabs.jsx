@@ -9,8 +9,7 @@ import {
   Animated,
   findNodeHandle,
 } from "react-native";
-import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
-import SafeView from "../../components/SafeView/SafeView";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import data from "./tabData";
 import { width, height } from "../../utilities/Distances";
 
