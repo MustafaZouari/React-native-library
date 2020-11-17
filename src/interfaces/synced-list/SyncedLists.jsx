@@ -155,6 +155,9 @@ const SyncedLists = () => {
         });
       }
     });
+    return () => {
+      scrollY.removeListener();
+    };
   });
   return (
     <View style={styles.container}>
