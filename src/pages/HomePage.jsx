@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/HomeIcon/IconButton";
-import SafeView from "../components/SafeView/SafeView";
+import SafeView from "../components/safeView/SafeView";
 
 const HomePage = ({ navigation }) => (
   <SafeView style={styles.container}>
