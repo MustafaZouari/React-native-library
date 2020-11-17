@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/HomeIcon/IconButton";
-import SafeView from "../components/SafeView/SafeView";
+import SafeView from "../components/safeView/SafeView";
 
 const HomePage = ({ navigation }) => (
   <SafeView style={styles.container}>
@@ -15,6 +15,15 @@ const HomePage = ({ navigation }) => (
       title="GO TO TABS"
       onPress={() => {
         navigation.navigate("animated-tabs");
+      }}
+    />
+    <IconButton
+      color="#e63946"
+      textColor="black"
+      textStyle={{ fontSize: 20 }}
+      title="GO TO SYNCED_LISTS"
+      onPress={() => {
+        navigation.navigate("synced-lists");
       }}
     />
   </SafeView>
