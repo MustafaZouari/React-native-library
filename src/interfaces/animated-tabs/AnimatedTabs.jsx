@@ -1,31 +1,13 @@
 import React, { useCallback, useRef, useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  Image,
-  Animated,
-  findNodeHandle,
-} from "react-native";
+import { View, Text, StyleSheet, Image, Animated } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import data from "./tabData";
 import { width, height } from "../../utilities/Distances";
 
-// const GoBack = () => (
-//   <Pressable
-//     onPress={() => {
-//       navigation.goBack();
-//     }}
-//     style={{ backgroundColor: "black" }}
-//   >
-//     <Text>Goback</Text>
-//   </Pressable>
-// );
-
 const Indicator = ({ measures, scrollX }) => {
   const inputRange = data.map((_, i) => i * width);
+
+  // interpolated values
   const indicatorWidth = scrollX.interpolate({
     inputRange,
     outputRange: measures.map((measure) => measure.width),
@@ -34,6 +16,7 @@ const Indicator = ({ measures, scrollX }) => {
     inputRange,
     outputRange: measures.map((measure) => measure.x),
   });
+
   return (
     <Animated.View
       style={{
@@ -125,21 +108,20 @@ const AnimatedTabs = () => {
 
   return (
     <View>
-      <StatusBar />
       <Animated.FlatList
-        ref={ref}
         data={data}
+        keyExtractor={(item) => item.key}
+        ref={ref}
+        showsHorizontalScrollIndicator={false}
         horizontal
+        decelerationRate="fast"
+        scrollEventThrottle={16}
+        bounces={false}
+        snapToInterval={width}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
           { useNativeDriver: false }
         )}
-        decelerationRate="fast"
-        scrollEventThrottle={16}
-        bounces={false}
-        showsHorizontalScrollIndicator={false}
-        snapToInterval={width}
-        keyExtractor={(item) => item.key}
         renderItem={({ item }) => {
           return (
             <View style={{ width, height }}>
@@ -161,11 +143,5 @@ const AnimatedTabs = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default AnimatedTabs;

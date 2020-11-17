@@ -7,7 +7,6 @@ import data from "./listData";
 import { StatusBar } from "expo-status-bar";
 
 const ICON_SIZE = 42;
-
 const ITEM_HEIGHT = ICON_SIZE * 2;
 
 const colors = {
@@ -23,7 +22,9 @@ const Item = React.memo(({ icon, color, name, showText }) => {
   return (
     <View style={styles.itemWrapper}>
       {showText ? (
-        <Text style={[styles.itemText, { color }]}>{name}</Text>
+        <Text style={[styles.itemText, { color, fontWeight: "bold" }]}>
+          {name}
+        </Text>
       ) : (
         <View />
       )}
@@ -84,7 +85,7 @@ const ConnectButton = React.memo(({ onPress }) => {
         }}
         activeOpacity={0.8}
       >
-        <Text style={{ fontSize: 32, fontWeight: "800", color: colors.dark }}>
+        <Text style={{ fontSize: 26, fontWeight: "600", color: colors.dark }}>
           Done!
         </Text>
       </TouchableOpacity>
@@ -97,24 +98,23 @@ const List = React.forwardRef(
     return (
       <Animated.FlatList
         data={data}
-        ref={ref}
-        scrollEnabled={!showText}
         keyExtractor={(item) => `${item.name} - ${item.icon}`}
+        ref={ref}
+        style={style}
+        scrollEnabled={!showText}
+        onScroll={onScroll}
+        showsVerticalScrollIndicator={false}
         bounces={false}
         scrollEventThrottle={16}
-        style={style}
         snapToInterval={ITEM_HEIGHT}
         decelerationRate="fast"
-        onScroll={onScroll}
         contentContainerStyle={{
           paddingTop: showText ? 0 : height / 2 - ITEM_HEIGHT / 2,
           paddingBottom: showText ? 0 : height / 2 - ITEM_HEIGHT / 2,
           paddingHorizontal: 20,
         }}
-        showsVerticalScrollIndicator={false}
         onMomentumScrollEnd={(ev) => {
           let index = Math.round(ev.nativeEvent.contentOffset.y) / ITEM_HEIGHT;
-
           if (onIndexChange) {
             onIndexChange(index);
           }
@@ -156,7 +156,7 @@ const SyncedLists = () => {
       }
     });
     return () => {
-      scrollY.removeListener();
+      scrollY.removeAllListeners();
     };
   });
   return (

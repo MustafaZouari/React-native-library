@@ -18,12 +18,21 @@ const HomePage = ({ navigation }) => (
       }}
     />
     <IconButton
-      color="black"
+      color="#457b9d"
       textColor="white"
       textStyle={{ fontSize: 20, textTransform: "uppercase" }}
       title="Go To Donut Chart"
       onPress={() => {
         navigation.navigate("donut-chart");
+      }}
+    />
+    <IconButton
+      color="black"
+      textColor="white"
+      textStyle={{ fontSize: 20, textTransform: "uppercase" }}
+      title="Go To Synced lists"
+      onPress={() => {
+        navigation.navigate("synced-lists");
       }}
     />
   </SafeView>
