@@ -3,7 +3,6 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomePage from "../pages/HomePage";
 import AnimatedTabs from "../interfaces/animated-tabs/AnimatedTabs";
-import { StatusBar } from "expo-status-bar";
 import SyncedLists from "../interfaces/synced-list/SyncedLists";
 import AnimatedCharts from "../interfaces/animated-donut-chart/AnimatedCharts";
 
