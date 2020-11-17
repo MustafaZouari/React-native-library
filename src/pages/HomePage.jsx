@@ -4,37 +4,50 @@ import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/iconButton/IconButton";
 import SafeView from "../components/safeView/SafeView";
 
+const data = [
+  {
+    color: "black",
+    textColor: "white",
+    title: "GO TO TABS",
+    navigateTo: `animated-tabs`,
+  },
+  {
+    color: "#457b9d",
+    textColor: "white",
+    title: "Go To Donut Chart",
+    navigateTo: "donut-chart",
+  },
+  {
+    color: "black",
+    textColor: "white",
+    title: "go to synced lists",
+    navigateTo: "synced-lists",
+  },
+  {
+    color: "#457b9d",
+    textColor: "white",
+    title: "Go To playground",
+    navigateTo: "playground",
+  },
+];
+
 const HomePage = ({ navigation }) => (
   <SafeView style={styles.container}>
     <StatusBar hidden />
-
-    <IconButton
-      color="black"
-      textColor="white"
-      textStyle={{ fontSize: 20 }}
-      title="GO TO TABS"
-      onPress={() => {
-        navigation.navigate("animated-tabs");
-      }}
-    />
-    <IconButton
-      color="#457b9d"
-      textColor="white"
-      textStyle={{ fontSize: 20, textTransform: "uppercase" }}
-      title="Go To Donut Chart"
-      onPress={() => {
-        navigation.navigate("donut-chart");
-      }}
-    />
-    <IconButton
-      color="black"
-      textColor="white"
-      textStyle={{ fontSize: 20, textTransform: "uppercase" }}
-      title="Go To Synced lists"
-      onPress={() => {
-        navigation.navigate("synced-lists");
-      }}
-    />
+    {data.map((el, i) => {
+      return (
+        <IconButton
+          key={i}
+          color={el.color}
+          textColor={el.textColor}
+          textStyle={{ fontSize: 20, textTransform: "uppercase" }}
+          title={el.title}
+          onPress={() => {
+            navigation.navigate(el.navigateTo);
+          }}
+        />
+      );
+    })}
   </SafeView>
 );
 
