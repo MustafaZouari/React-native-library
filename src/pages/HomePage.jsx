@@ -17,6 +17,15 @@ const HomePage = ({ navigation }) => (
         navigation.navigate("animated-tabs");
       }}
     />
+    <IconButton
+      color="#e63946"
+      textColor="black"
+      textStyle={{ fontSize: 20 }}
+      title="GO TO SYNCED_LISTS"
+      onPress={() => {
+        navigation.navigate("synced-lists");
+      }}
+    />
   </SafeView>
 );
 
