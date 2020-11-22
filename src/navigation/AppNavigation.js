@@ -1,11 +1,13 @@
 import "react-native-gesture-handler";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomePage from "../pages/HomePage";
+
+import AnimatedCharts from "../interfaces/animated-donut-chart/AnimatedCharts";
 import AnimatedTabs from "../interfaces/animated-tabs/AnimatedTabs";
 import SyncedLists from "../interfaces/synced-list/SyncedLists";
-import AnimatedCharts from "../interfaces/animated-donut-chart/AnimatedCharts";
 import PlayGround from "../interfaces/playground/PlayGround";
+import Carousel from "../interfaces/carousel/Carousel";
+import HomePage from "../pages/HomePage";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +19,7 @@ export default function AppNavigation() {
       <Stack.Screen name="synced-lists" component={SyncedLists} />
       <Stack.Screen name="donut-chart" component={AnimatedCharts} />
       <Stack.Screen name="playground" component={PlayGround} />
+      <Stack.Screen name="carousel" component={Carousel} />
     </Stack.Navigator>
   );
 }

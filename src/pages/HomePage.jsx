@@ -29,6 +29,12 @@ const data = [
     title: "Go To playground",
     navigateTo: "playground",
   },
+  {
+    color: "black",
+    textColor: "white",
+    title: "Go To Carousel",
+    navigateTo: "carousel",
+  },
 ];
 
 const HomePage = ({ navigation }) => (
