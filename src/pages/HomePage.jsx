@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/iconButton/IconButton";
-import SafeView from "../components/safeView/SafeView";
+import SafeView from '../components/SafeView/SafeView'
 
 const data = [
   {

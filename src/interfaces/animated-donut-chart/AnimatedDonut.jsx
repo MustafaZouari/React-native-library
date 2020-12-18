@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { View, Text, StyleSheet, Animated } from "react-native";
+import { View,  StyleSheet, Animated } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
 import Svg, { G, Circle } from "react-native-svg";
-import SafeView from "../../components/safeView/SafeView";
 
 // animated custom components
 const AnimatedCircle = new Animated.createAnimatedComponent(Circle);
