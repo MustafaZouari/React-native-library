@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Animated } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
 import Svg, { G, Circle } from "react-native-svg";
-import SafeView from "../../components/safeView/SafeView";
+import SafeView  from '../../components/SafeView/SafeView'
 
 // animated custom components
 const AnimatedCircle = new Animated.createAnimatedComponent(Circle);
