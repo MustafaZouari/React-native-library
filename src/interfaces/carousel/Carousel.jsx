@@ -112,7 +112,7 @@ const Indicator = ({ scrollX }) => {
               height: 12,
               width: 12,
               borderRadius: 6,
-              backgroundColor: "#7a7a7d",
+              backgroundColor: "grey",
               margin: 6,
               transform: [{ scale }],
               opacity,
@@ -132,7 +132,7 @@ const Indicator = ({ scrollX }) => {
 const Carousel = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
   return (
-    <View style={{ flex: 1, alignItems: "center" }}>
+    <View style={{ flex: 1, alignItems: "center" }}  >
       <Backdrop scrollX={scrollX} />
       <Square scrollX={scrollX} />
       <FlatList
@@ -165,7 +165,7 @@ const Carousel = () => {
               >
                 <Image
                   source={{ uri: item.image }}
-                  style={{ width: width / 2, height: width / 2 }}
+                  style={{ width: width / 2, height: width / 2, }}
                 />
               </View>
               <View style={{ flex: 0.3, padding: SPACING }}>
