@@ -7,6 +7,7 @@ import AnimatedTabs from "../interfaces/animated-tabs/AnimatedTabs";
 import SyncedLists from "../interfaces/synced-list/SyncedLists";
 import PlayGround from "../interfaces/playground/PlayGround";
 import Carousel from "../interfaces/carousel/Carousel";
+import SharedElements from "../interfaces/shared-elements/SharedElements";
 import HomePage from "../pages/HomePage";
 import Gallery from "../interfaces/synced-gallery/Gallery";
 
