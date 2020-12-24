@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/iconButton/IconButton";
-import SafeView from '../components/SafeView/SafeView'
+import SafeView from "../components/SafeView/SafeView";
 
 const data = [
   {
@@ -34,6 +34,12 @@ const data = [
     textColor: "white",
     title: "Go To Carousel",
     navigateTo: "carousel",
+  },
+  {
+    color: "#457b9d",
+    textColor: "white",
+    title: "Go To Shared elements",
+    navigateTo: "shared-elements",
   },
 ];
 
