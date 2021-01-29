@@ -22,8 +22,7 @@ export default function AppNavigation() {
       <Stack.Screen name="donut-chart" component={AnimatedCharts} />
       <Stack.Screen name="playground" component={PlayGround} />
       <Stack.Screen name="carousel" component={Carousel} />
-      <Stack.Screen name="Gallery" component={Gallery} />
-      <Stack.Screen name="shared-transition" component={SharedElements} />
+      <Stack.Screen name="shared-elements" component={SharedElements} />
     </Stack.Navigator>
   );
 }
