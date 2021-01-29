@@ -8,6 +8,7 @@ import SyncedLists from "../interfaces/synced-list/SyncedLists";
 import PlayGround from "../interfaces/playground/PlayGround";
 import Carousel from "../interfaces/carousel/Carousel";
 import HomePage from "../pages/HomePage";
+import Gallery from "../interfaces/synced-gallery/Gallery";
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function AppNavigation() {
       <Stack.Screen name="donut-chart" component={AnimatedCharts} />
       <Stack.Screen name="playground" component={PlayGround} />
       <Stack.Screen name="carousel" component={Carousel} />
+      <Stack.Screen name="Gallery" component={Gallery} />
     </Stack.Navigator>
   );
 }
