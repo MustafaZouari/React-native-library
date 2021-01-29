@@ -23,6 +23,7 @@ export default function AppNavigation() {
       <Stack.Screen name="playground" component={PlayGround} />
       <Stack.Screen name="carousel" component={Carousel} />
       <Stack.Screen name="Gallery" component={Gallery} />
+      <Stack.Screen name="shared-transition" component={SharedElements} />
     </Stack.Navigator>
   );
 }
