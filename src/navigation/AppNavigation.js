@@ -10,6 +10,7 @@ import Carousel from "../interfaces/carousel/Carousel";
 import SharedElements from "../interfaces/shared-elements/SharedElements";
 import HomePage from "../pages/HomePage";
 import Gallery from "../interfaces/synced-gallery/Gallery";
+import ImageDetails from "../interfaces/shared-elements/ImageDetails";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export default function AppNavigation() {
       <Stack.Screen name="playground" component={PlayGround} />
       <Stack.Screen name="carousel" component={Carousel} />
       <Stack.Screen name="shared-elements" component={SharedElements} />
+      <Stack.Screen name="shared-elements-detail" component={ImageDetails} />
     </Stack.Navigator>
   );
 }
