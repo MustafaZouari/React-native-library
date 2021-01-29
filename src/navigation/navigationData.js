@@ -35,4 +35,10 @@ export const data = [
     title: "Go to Gallery",
     navigateTo: "Gallery",
   },
+  {
+    color: "#457b9d",
+    textColor: "white",
+    title: "Transition",
+    navigateTo: "shared-transition",
+  },
 ];
