@@ -3,45 +3,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import IconButton from "../components/iconButton/IconButton";
 import SafeView from "../components/SafeView/SafeView";
-
-const data = [
-  {
-    color: "black",
-    textColor: "white",
-    title: "GO TO TABS",
-    navigateTo: `animated-tabs`,
-  },
-  {
-    color: "#457b9d",
-    textColor: "white",
-    title: "Go To Donut Chart",
-    navigateTo: "donut-chart",
-  },
-  {
-    color: "black",
-    textColor: "white",
-    title: "go to synced lists",
-    navigateTo: "synced-lists",
-  },
-  {
-    color: "#457b9d",
-    textColor: "white",
-    title: "Go To playground",
-    navigateTo: "playground",
-  },
-  {
-    color: "black",
-    textColor: "white",
-    title: "Go To Carousel",
-    navigateTo: "carousel",
-  },
-  {
-    color: "#457b9d",
-    textColor: "white",
-    title: "Go To Shared elements",
-    navigateTo: "shared-elements",
-  },
-];
+import { data } from "../navigation/navigationData";
 
 const HomePage = ({ navigation }) => (
   <SafeView style={styles.container}>

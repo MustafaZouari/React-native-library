@@ -39,6 +39,6 @@ export const data = [
     color: "#457b9d",
     textColor: "white",
     title: "Transition",
-    navigateTo: "shared-transition",
+    navigateTo: "shared-elements",
   },
 ];
